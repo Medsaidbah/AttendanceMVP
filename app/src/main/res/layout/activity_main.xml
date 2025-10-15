@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Student ID -->
+        <EditText
+            android:id="@+id/studentIdEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Student ID (matricule)"
+            android:inputType="textNoSuggestions" />
+
+        <!-- Function URL -->
+        <EditText
+            android:id="@+id/functionUrlEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Function URL (https://...)"
+            android:inputType="textUri" />
+
+        <!-- API key -->
+        <EditText
+            android:id="@+id/apiKeyEt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="x-api-key (optional)"
+            android:inputType="textPassword"
+            android:importantForAutofill="no" />
+
+        <!-- Status / last result -->
+        <TextView
+            android:id="@+id/resultTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Ready."
+            android:paddingTop="12dp" />
+
+        <!-- Actions -->
+        <Button
+            android:id="@+id/btnSendTest"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Send test capture"
+            android:layout_marginTop="12dp" />
+
+        <Button
+            android:id="@+id/btnSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Schedule daily (07:45 / 13:00 / 17:00)"
+            android:layout_marginTop="8dp" />
+
+        <!-- Short privacy note -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Privacy: This app sends your Student ID, device ID (UUID), GPS (lat/lng + accuracy), and a timestamp to the configured HTTPS endpoint at Entry, Break, and Exit times."
+            android:textSize="12sp"
+            android:paddingTop="12dp" />
+    </LinearLayout>
+</ScrollView>
